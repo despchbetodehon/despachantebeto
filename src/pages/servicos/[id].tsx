@@ -56,8 +56,8 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)',
   },
   appBar: {
-    background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
-    boxShadow: '0 4px 20px rgba(37, 99, 235, 0.3)',
+    background: 'linear-gradient(135deg, #e2e2e2ff 0%rgba(214, 214, 214, 1)d8 100%)',
+    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
   },
   backButton: {
     marginRight: theme.spacing(2),
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
   },
   serviceIcon: {
     fontSize: 80,
-    color: '#2563eb',
+    color: '#afafafff',
     marginBottom: theme.spacing(2),
   },
   serviceName: {
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
   },
   categoryChip: {
     backgroundColor: '#dbeafe',
-    color: '#1e40af',
+    color: '#e0e0e0ff',
     fontWeight: 'bold',
     marginBottom: theme.spacing(2),
   },
@@ -130,16 +130,16 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #e5e7eb',
   },
   actionCard: {
-    background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
+    background: 'linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)',
     color: '#fff',
     borderRadius: theme.spacing(2),
     padding: theme.spacing(3),
     textAlign: 'center',
-    boxShadow: '0 8px 32px rgba(37, 99, 235, 0.3)',
+    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
   },
   actionButton: {
     backgroundColor: '#fff',
-    color: '#2563eb',
+    color: '#cfcfcfff',
     fontWeight: 'bold',
     margin: theme.spacing(1),
     '&:hover': {
@@ -209,20 +209,7 @@ const ServicoDetail: React.FC<ServicoDetailProps> = ({ servico }) => {
 
   return (
     <Box className={classes.root}>
-      {/* Header */}
-      <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            className={classes.backButton}
-            onClick={handleVoltar}
-          >
-            <ArrowBack />
-          </IconButton>
-          <Typography variant="h6" style={{ flexGrow: 1, fontWeight: 'bold' }}>
-            Detalhes do Serviço
-          </Typography>
-        </Toolbar>
-      </AppBar>
+     
 
       <Container maxWidth="lg" className={classes.container}>
         {/* Breadcrumbs */}
