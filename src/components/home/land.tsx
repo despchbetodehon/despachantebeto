@@ -3,7 +3,7 @@ import { Box, Typography, Button, useMediaQuery } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
-import ChatIAbot from '../chat/ChatIAbot';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -84,7 +84,7 @@ export default function Land() {
       transition={{ duration: 1, type: 'spring', bounce: 0.2 }}
       id="home"
     >
-       <ChatIAbot /> 
+      
       <motion.img
         src="/betologo.jpg"
         alt="Beto Dehon Hero"
