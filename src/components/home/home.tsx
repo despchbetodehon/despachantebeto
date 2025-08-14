@@ -614,66 +614,27 @@ export default function ResponsiveAppBar() {
           </Box>
         ))}
       </List>
-      <Divider style={{ margin: "28px 0", background: "#4a7c5944" }} />
+   
 
       <Box className={classes.actionButtons}>
-        {isAuthenticated ? (
-          <>
-            {[
-              { icon: <FaWhatsapp />, label: "WhatsApp", color: "#25d366" },
-              ...(hasClienteAccess ? [{ icon: <Assignment />, label: "Área Cliente", path: "/area-cliente" }] : []),
-           
-              ...(hasColaboradorAccess ? [{ icon: <Dashboard />, label: "Colaboradores", path: "/colaboradores" }] : [])
-            ].map((btn: ActionButton, index) => (
-              btn.path ? (
-                <Link href={btn.path} passHref key={index}>
-                  <Button
-                    startIcon={btn.icon}
-                    className={classes.actionButton}
-                    onClick={() => setDrawerOpen(false)}
-                    aria-label={btn.label}
-                    fullWidth
-                  >
-                    {btn.label}
-                  </Button>
-                </Link>
-              ) : (
-                <Button
-                  key={index}
-                  startIcon={btn.icon}
-                  className={classes.actionButton}
-                  style={{
-                    background: `linear-gradient(45deg, ${btn.color} 30%, ${btn.color}dd 90%)`,
-                    color: '#fff'
-                  }}
-                  onClick={() => setContactDialog(true)}
-                  aria-label={btn.label}
-                  fullWidth
-                >
-                  {btn.label}
-                </Button>
-              )
-            ))}
-            <Divider style={{ margin: "28px 0", background: "#4a7c5944" }} />
-            <Button
-              startIcon={<ExitToApp />}
-              style={{
-                background: 'linear-gradient(60deg,#d73232 40%,#b71c1c 120%)',
-                color: '#fff',
-                fontWeight: 800,
-                borderRadius: 22,
-                fontSize: 16,
-                minWidth: 200,
-                fontFamily: '"Playfair Display", "Georgia", serif',
-              }}
-              onClick={logout}
-              aria-label="Sair"
-              fullWidth
-            >
-              Sair do Sistema
-            </Button>
-          </>
-        ) : null}
+        <Divider style={{ margin: "28px 0", background: "#4a7c5944" }} />
+        <Button
+          startIcon={<ExitToApp />}
+          style={{
+            background: 'linear-gradient(10deg,#d73434 40%,#b71c1c 120%)',
+            color: '#fff',
+            fontWeight: 800,
+            borderRadius: 22,
+            fontSize: 16,
+            minWidth: 200,
+            fontFamily: '"Playfair Display", "Georgia", serif',
+          }}
+          onClick={logout}
+          aria-label="Sair"
+          fullWidth
+        >
+          Sair do Sistema
+        </Button>
       </Box>
     </Box>
   );
