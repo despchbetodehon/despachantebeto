@@ -225,17 +225,7 @@ const Servicos: React.FC = () => {
 
   return (
     <Box className={classes.root}>
-      {/* Header */}
-      <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" style={{ flexGrow: 1, fontWeight: 'bold' }}>
-            Catálogo de Serviços - Beto Dheon
-          </Typography>
-          <Typography variant="body2" style={{ opacity: 0.9 }}>
-            {servicosFiltrados.length} serviços disponíveis
-          </Typography>
-        </Toolbar>
-      </AppBar>
+     
 
       <Container maxWidth="xl" style={{ padding: '24px' }}>
         {/* Estatísticas */}
